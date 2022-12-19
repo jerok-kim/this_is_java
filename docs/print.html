@@ -147,6 +147,185 @@
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="자바-시작하기"><a class="header" href="#자바-시작하기">자바 시작하기</a></h1>
+<h2 id="1-1-프로그래밍-언어와-자바"><a class="header" href="#1-1-프로그래밍-언어와-자바">1-1. 프로그래밍 언어와 자바</a></h2>
+<ul>
+<li>컴퓨터가 이해할 수 있는 기계어(machine language)는 0과 1로 이루어진 이진 코드를 사용한다.</li>
+<li>사람과 컴퓨터가 대화하기 위해서는 사람의 언어와 기계어의 다리 역할을 하는 프로그래밍 언어가 필요하다.</li>
+<li>프로그래밍 언어는 고급 언어와 저급 언어로 구분된다.</li>
+<li>고급 언어로 작성된 소스 파일은 컴퓨터가 바로 이해할 수 없기 때문에 컴파일(compile)이라는 과정을 통해서 컴퓨터가 이해할 수 있는 0과 1로 이루어진 기계어로 변환한 후 컴퓨터가 사용하게 된다.</li>
+<li>반대로 저급 언어란 기계어에 가까운 언어를 말하는데, 대표적으로 어셈블리어가 저급 언어에 속한다.</li>
+<li>자바는 1995년도에 처음 썬 마이크로시스템즈(Sun Microsystems)에서 발표한 후, 가장 성공한 프로그래밍 언어로서 전세계적으로 다양한 분야에서 사용되고 있다.</li>
+<li>안드로이드 폰에서 실행하는 애플리케이션 뿐만 아니라, 웹 사이트를 개발하는 핵심 언어로 사용되고 있다.</li>
+<li>모든 운영체제에서 실행 가능한 데스크톱 애플리케이션도 개발할 수 있다.</li>
+<li>자바는 다른 프로그래밍 언어에 비해 다음과 같은 특징이 있다.
+<ol>
+<li>모든 운영체제에서 실행 가능</li>
+</ol>
+<ul>
+<li>자바로 작성된 프로그램은 운영체제와 상관없이 모두 실행되기 때문에 윈도우에서 개발된 프로그램을 수정 없이 바로 맥OS 또는 리눅스에서도 실행할 수 있다는 장점이 있다.</li>
+</ul>
+<ol start="2">
+<li>객체 지향 프로그래밍</li>
+</ol>
+<ul>
+<li>먼저 객체(부품)를 만들고, 이 객체들을 서로 연결해서 더 큰 프로그램을 완성시키는 기법을 객체 지향 프로그래밍(Object Oriented Programming, OOP)이라고 한다.</li>
+<li>자바는 OOP를 위한 최적의 언어이다.</li>
+</ul>
+<ol start="3">
+<li>메모리 자동 정리</li>
+</ol>
+<ul>
+<li>자바는 메모리(RAM)를 자동 관리하므로, 개발자는 메모리 관리의 수고스러움을 덜고 핵심 기능 작성에 집중할 수 있다.</li>
+</ul>
+<ol start="4">
+<li>무료 라이브러리 풍부</li>
+</ol>
+<ul>
+<li>무료로 다운로드해서 사용할 수 있는 오픈 소스 라이브러리(Open Source Library)가 풍부하기 때문에 프로그램 개발 기간을 단축시켜준다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-자바-개발-환경-설정"><a class="header" href="#1-2-자바-개발-환경-설정">1-2. 자바 개발 환경 설정</a></h2>
+<ul>
+<li>내가 사용할 환경은 다음과 같다.
+<ul>
+<li>자바는 17버전을 주로 쓰고, 19, 11, 8 버전도 사용해보겠다.</li>
+<li>amazon corretto 에서 jdk를 다운 받았다.</li>
+<li>통합 IDE는 Jetbrains 의 Intellij IDEA Ultimate 버전을 사용한다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-바이트코드-파일과-자바-가상-머신"><a class="header" href="#1-3-바이트코드-파일과-자바-가상-머신">1-3. 바이트코드 파일과 자바 가상 머신</a></h2>
+<ul>
+<li>JDK를 설치했다면 이제 자바 언어로 작성한 소스 파일을 만들고 컴파일할 수 있다.</li>
+<li>자바 소스 파일의 확장명은 <code>.java</code>이다.</li>
+</ul>
+<h3 id="바이트코드-파일"><a class="header" href="#바이트코드-파일">바이트코드 파일</a></h3>
+<ul>
+<li>소스 파일(<code>.java</code>)을 작성한 후에는 컴파일을 해야 한다.</li>
+<li>javac(java compiler) 명령어는 소스 파일을 컴파일하는데, 컴파일 결과는 확장명이 <code>.class</code>인 바이트코드(ByteCode) 파일로 생성된다.</li>
+<li>윈도우, 맥OS, 리눅스 등 어떤 운영체제라 하더라도 동일한 소스 파일을 javac로 컴파일하면 모두 동일한 바이트코드 파일이 생성된다.</li>
+</ul>
+<h3 id="자바-가상-머신"><a class="header" href="#자바-가상-머신">자바 가상 머신</a></h3>
+<ul>
+<li>바이트코드 파일(<code>*.class</code>)을 특정 운영체제가 이해하는 기계어로 번역하고 실행시키는 명령어는 <code>java</code>이다.</li>
+<li><code>java</code>명령어는 JDK와 함께 설치된 자바 가상 머신(Java Virtual Machine, JVM)을 구동시켜 바이트 코드 파일을 완전한 기계어로 번역하고 실행시킨다.</li>
+<li>바이트코드 파일은 운영체제와 상관없이 모두 동일한 내용으로 생성되지만, 자바 가상 머신은 운영체제에서 이해하는 기계어로 번역해야 하므로 운영체제별로 다르게 설치된다.</li>
+<li>그래서 운영체제별로 설치하는 JDK가 다른 것이다.</li>
+</ul>
+<p><img src="./images/java_compile_diagram.png" alt="자바 컴파일 다이어그램" /></p>
+<h2 id="1-4-소스-작성부터-실행까지"><a class="header" href="#1-4-소스-작성부터-실행까지">1-4. 소스 작성부터 실행까지</a></h2>
+<blockquote>
+<h4 id="패키지란"><a class="header" href="#패키지란">패키지란?</a></h4>
+<ul>
+<li>자바는 소스 파일 및 컴파일된 바이트코드 파일을 쉽게 관리하기 위해 패키지(package)를 사용한다.</li>
+<li>패키지는 마치 파일 시스템의 디렉토리와 비슷하다.</li>
+</ul>
+</blockquote>
+<pre><code class="language-java">package ch01.sec06;                             // 바이트코드 파일이 위치할 패키지 선언
+
+public class Hello {                            // Hello 클래스 선언
+    public static void main(String[] args) {    // main() 메소드 선언
+        System.out.println(&quot;Hello, Java&quot;);      // 콘솔에 출력하는 코드
+    }
+}
+</code></pre>
+<h2 id="1-5-코드-용어-이해"><a class="header" href="#1-5-코드-용어-이해">1-5. 코드 용어 이해</a></h2>
+<pre><code class="language-java">package ch01.sec06;
+</code></pre>
+<ul>
+<li>다음과 같은 코드를 패키지 선언이라고 부르며, 이는 소스 파일이 <code>src/ch01/sec06</code>패키지에 있다는 뜻이다.</li>
+<li><code>public class Hello</code>를 클래스 선언이라 부르며, <code>Hello</code>를 클래스명이라고 한다.</li>
+<li>클래스명은 숫자로 시작할 수 없고, 공백을 포함해서는 안된다.</li>
+<li>그리고 소스 파일명과 대소문자가 완전히 일치해야 한다.</li>
+<li>그 다음으로 나오는 중괄호 { ... }를 클래스 블록이라고 하며, 여기에는 클래스의 정의 내용이 작성된다.</li>
+<li><code>public static void main(String[] args) {...}</code>를 <code>main()</code>메소드라고 부른다.</li>
+<li>그리고 중괄호 <code>{...}</code>를 <code>main()</code>메소드 블록이라고 한다.</li>
+<li>바이트코드 파일을 실행하면 이 <code>main()</code>메소드 블록이 실행된다.</li>
+<li>그래서 <code>main()</code>메소드를 프로그램 실행 진입점(entry point)이라고 부른다.</li>
+<li>마지막줄은 괄호 안에 있는 내용을 Console 뷰에 출력하는 코드이다.</li>
+</ul>
+<pre><code class="language-java">System.out.println(&quot;Hello, Java&quot;);
+</code></pre>
+<h2 id="1-6-코드-주석-달기"><a class="header" href="#1-6-코드-주석-달기">1-6. 코드 주석 달기</a></h2>
+<ul>
+<li>주석은 프로그램 실행과는 상관없이 코드에 설명을 붙인 것이다.</li>
+<li>복잡한 코드일수록 주석을 달면 전체 코드를 이해하기 쉽다.</li>
+<li>주석은 컴파일 과정에서 무시되기 때문에 주석을 많이 작성한다고 해서 바이트코드 파일의 크기가 커지는 것은 아니다.</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>구분</th><th>주석 기호</th><th>설명</th></tr></thead><tbody>
+<tr><td>행 주석</td><td>// ⋯</td><td>//부터 행 끝까지 주석으로 처리한다.</td></tr>
+<tr><td>범위 주석</td><td>/* ⋯ */</td><td>/*와 */사이에 있는 내용은 모두 주석으로 처리한다.</td></tr>
+<tr><td>도큐먼트 주석</td><td>/** ⋯ */</td><td>/**와 */사이에 있는 내용은 모두 주석으로 처리한다.<br>javadoc 명령어로 API 도큐먼트를 생성하는 데 사용한다.</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>주석 기호는 코드 내 어디서든 작성이 가능하지만, 문자열(&quot; &quot;) 내부에서 작성하면 안 된다.</li>
+<li>문자열 내부에서 주석 기호는 주석문이 아니라 문자열 데이터로 인식하기 때문이다.</li>
+</ul>
+<pre><code class="language-java">System.out.println(&quot;Hello, /*주석이 될 수 없음*/ welcome to the java world!&quot;);
+</code></pre>
+<ul>
+<li>주석문 작성을 연습해보자.</li>
+</ul>
+<pre><code class="language-java">package ch01.sec11;
+
+/**
+ * @author jerok-kim
+ */
+/*
+장제목: 1장 자바 시작하기
+작성일: 2022.12.19
+ */
+public class Hello {
+    // 프로그램 실행 진입점
+    public static void main(String[] args) {
+        // 콘솔에 출력하는 실행문
+        System.out.println(&quot;Hello, Java&quot;);
+    }
+}
+</code></pre>
+<h2 id="1-7-실행문과-세미콜론"><a class="header" href="#1-7-실행문과-세미콜론">1-7. 실행문과 세미콜론</a></h2>
+<ul>
+<li><code>main()</code>메소드 블록 내부에는 다양한 실행문이 작성된다.</li>
+<li><code>System.out.println(&quot;Hello, Java&quot;);</code>은 괄호() 안의 내용을 출력하는 실행문이다.</li>
+<li>실행문은 변수 선언, 변수값 저장, 메소드 호출에 해당하는 코드를 말한다.</li>
+</ul>
+<pre><code class="language-java">int x;                       // 변수 x 선언
+x = 1;                       // 변수 x에 1 값을 저장
+int y = 2;                   // 변수 y를 선언하고 2 값을 저장
+int result = x + y;          // 변수 result를 선언하고 변수 x와 y를 더한 값을 저장
+System.out.println(result);  // 콘솔에 변수의 값을 출력하는 println() 메소드 호출
+</code></pre>
+<ul>
+<li>실행문 끝에는 반드시 세미콜론(;)을 붙여야 한다.</li>
+<li>실행문을 여러 줄에 걸쳐서 작성하고 맨 마지막에 세미콜론을 붙여도 된다.</li>
+<li>또한 여러 가지 실행문을 세미콜론으로 구분해서 한 줄로 작성할 수도 있다.</li>
+<li>실행문에 세미콜론을 붙이는 실습을 해보자.</li>
+</ul>
+<pre><code class="language-java">package ch01.sec12;
+
+public class Calculator {
+    public static void main(String[] args) {
+        int x = 1;                   // 변수 x를 선언하고 1을 저장
+        int y = 2;                   // 변수 y를 선언하고 2를 저장
+        int result = x + y;          // 변수 result를 선언하고 x와 y를 더한 값을 저장
+        System.out.println(result);  // 콘솔에 출력하는 메소드 호출
+    }
+}
+</code></pre>
+<h2 id="연습"><a class="header" href="#연습">연습</a></h2>
+<h3 id="다음과-같이-출력되도록-examplejava를-패키지-ch01verify에서-작성해보자"><a class="header" href="#다음과-같이-출력되도록-examplejava를-패키지-ch01verify에서-작성해보자">다음과 같이 출력되도록 <code>Example.java</code>를 패키지 <code>ch01.verify</code>에서 작성해보자</a></h3>
+<pre><code class="language-text">개발자가 되기 위한 필수 개발 언어 Java
+</code></pre>
+<pre><code class="language-java">package ch01.verify;
+
+public class Example {
+    public static void main(String[] args) {
+        System.out.println(&quot;개발자가 되기 위한 필수 개발 언어 Java&quot;);
+    }
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="변수와-타입"><a class="header" href="#변수와-타입">변수와 타입</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="연산자"><a class="header" href="#연산자">연산자</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="조건문과-반복문"><a class="header" href="#조건문과-반복문">조건문과 반복문</a></h1>

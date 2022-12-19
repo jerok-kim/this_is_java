@@ -1,5 +1,8 @@
 .idea
-/code/**/**/.idea
+this_is_java.iml
+/code/.idea
+/code/out/*
+/code/code.iml
 
 ### Java template
 # Compiled class file
